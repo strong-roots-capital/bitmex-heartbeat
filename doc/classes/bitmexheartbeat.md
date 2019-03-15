@@ -58,7 +58,7 @@ Heartbeat timer to keep BitMEX Clients alive.
 
 ⊕ **new BitmexHeartbeat**(client: *`BitMEXClient`*): [BitmexHeartbeat](bitmexheartbeat.md)
 
-*Defined in [bitmex-heartbeat.ts:32](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L32)*
+*Defined in [bitmex-heartbeat.ts:32](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L32)*
 
 Create a heartbeat around a newly-initialized BitMEXClient.
 
@@ -82,7 +82,7 @@ ___
 
 **● bitmexClient**: *`BitMEXClient`*
 
-*Defined in [bitmex-heartbeat.ts:30](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L30)*
+*Defined in [bitmex-heartbeat.ts:30](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L30)*
 
 ___
 <a id="killswitch"></a>
@@ -91,7 +91,7 @@ ___
 
 **● killSwitch**: *`Timeout`* =  setTimeout(() => {}, 0)
 
-*Defined in [bitmex-heartbeat.ts:32](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L32)*
+*Defined in [bitmex-heartbeat.ts:32](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L32)*
 
 ___
 <a id="pingtimer"></a>
@@ -100,7 +100,7 @@ ___
 
 **● pingTimer**: *`Timeout`* =  setTimeout(() => {}, 0)
 
-*Defined in [bitmex-heartbeat.ts:31](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L31)*
+*Defined in [bitmex-heartbeat.ts:31](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L31)*
 
 ___
 <a id="defaultmaxlisteners"></a>
@@ -145,7 +145,7 @@ ___
 
 ▸ **closeHandler**(): `void`
 
-*Defined in [bitmex-heartbeat.ts:103](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L103)*
+*Defined in [bitmex-heartbeat.ts:103](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L103)*
 
 Stop heartbeat-timer.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **handleKillSwitch**(): `void`
 
-*Defined in [bitmex-heartbeat.ts:149](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L149)*
+*Defined in [bitmex-heartbeat.ts:149](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L149)*
 
 Signal that the server has dropped client's connection.
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **isServerResponse**(error: *`string`[]*): `boolean`
 
-*Defined in [bitmex-heartbeat.ts:127](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L127)*
+*Defined in [bitmex-heartbeat.ts:127](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L127)*
 
 True if an error from the server is merely a response to a ping.
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **messageHandler**(): `void`
 
-*Defined in [bitmex-heartbeat.ts:80](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L80)*
+*Defined in [bitmex-heartbeat.ts:80](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L80)*
 
 Reset heartbeat-timer thanks to proof-of-life from server.
 
@@ -384,7 +384,7 @@ ___
 
 ▸ **openHandler**(): `void`
 
-*Defined in [bitmex-heartbeat.ts:92](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L92)*
+*Defined in [bitmex-heartbeat.ts:92](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L92)*
 
 Start heartbeat-timer.
 
@@ -399,7 +399,7 @@ ___
 
 ▸ **pingTimerHandler**(): `void`
 
-*Defined in [bitmex-heartbeat.ts:60](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/b1b5972/src/bitmex-heartbeat.ts#L60)*
+*Defined in [bitmex-heartbeat.ts:60](https://github.com/strong-roots-capital/bitmex-heartbeat/blob/546af58/src/bitmex-heartbeat.ts#L60)*
 
 Ping the server to check its status.
 
