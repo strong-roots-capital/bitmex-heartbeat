@@ -11,14 +11,30 @@ npm install @strong-roots-capital/bitmex-heartbeat
 ## Use
 
 ``` typescript
-import bitmexHeartbeat from '@strong-roots-capital/bitmex-heartbeat'
-// TODO: describe usage
+import BitmexHeartbeat from '@strong-roots-capital/bitmex-heartbeat'
+import BitMEXClient from 'bitmex-realtime-api'
+
+const bitmexClient = new BitMEXClient()
+const heartbeat = new BitmexHeartbeat(bitmexClient)
+// Heartbeat begins on 'open' event of bitmexClient
+```
+
+Important: the BitMEX server only seems to respond to plain-text
+`ping`s, but it will respond to the ping as an error. Circumvent this
+by ignoring `pong`-related errors in your error handler
+
+``` typescript
+errorHandler(...error: string[]) {
+    if (this.heartbeat.isServerResponse(error)) { return /* no problem here */ }
+    console.log('Error:', ...error)
+    process.exit(1)
+}
 ```
 
 ## Related
 
-TODO
+- [bitmex-realtime-api](https://www.npmjs.com/package/bitmex-realtime-api)
 
-## Acknowledgments
+## Documentation
 
-TODO
+- [Heartbeats](https://www.bitmex.com/app/wsAPI#Heartbeats)
