@@ -10,7 +10,7 @@
     "ava:fail-fast": "ava -s -v --fail-fast",
     "watch:ava": "nodemon -e 'ts json' -x 'npm run ava || true'",
     "watch:ava:fail-fast": "nodemon -e 'ts json' -x 'npm run ava:fail-fast || true'",
-    "test": "nyc ava",
+    "test": "nyc ava -s -v",
     "test:tap": "nyc ava --tap | tap-nyc",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "watch:test": "nodemon -e 'ts json' -x 'npm test || true'",
