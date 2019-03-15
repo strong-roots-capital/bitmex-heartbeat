@@ -17,6 +17,12 @@ import BitMEXClient from 'bitmex-realtime-api'
 const bitmexClient = new BitMEXClient()
 const heartbeat = new BitmexHeartbeat(bitmexClient)
 // Heartbeat begins on 'open' event of bitmexClient
+
+// `heartbeat` emits `error` event if server stops responding, or if
+// there are no listeners to the `error` event, an error is thrown instead
+heartbeat.on('error', (error: Error) => {
+    // try reconnecting
+})
 ```
 
 Important: the BitMEX server only seems to respond to plain-text
