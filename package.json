@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/bitmex-heartbeat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handles websocket ping/pong with BitMEX",
   "main": "dist/bitmex-heartbeat.js",
   "types": "dist/bitmex-heartbeat.d.ts",
